@@ -33,6 +33,8 @@ static struct vidcodec h264 = {
 	.ench      = gst_video1_encode,
 	.fmtp_ench = gst_video1_fmtp_enc,
 	.fmtp_cmph = gst_video1_fmtp_cmp,
+	.decupdh   = gst_video1_decoder_set,
+	.dech      = gst_video1_decode,
 };
 
 

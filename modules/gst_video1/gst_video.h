@@ -16,6 +16,12 @@ int gst_video1_encoder_set(struct videnc_state **stp,
 int gst_video1_encode(struct videnc_state *st, bool update,
 		     const struct vidframe *frame);
 
+int gst_video1_decoder_set(struct viddec_state **vdsp,
+                           const struct vidcodec *vc,
+                           const char *fmtp);
+
+int gst_video1_decode(struct viddec_state *st, struct vidframe *frame,
+                      bool *intra, bool marker, uint16_t seq, struct mbuf *src);
 
 /* SDP */
 uint32_t gst_video1_h264_packetization_mode(const char *fmtp);
